@@ -9,7 +9,8 @@
 #include <stdio.h>
 #include <netdb.h>
 #include <arpa/inet.h>
-
+#include <sys/socket.h>
+     
 int main(int argc, char **argv){
     char *subnetMask = argv[1];
     char *dottedIp = argv[2]; 
