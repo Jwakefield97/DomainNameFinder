@@ -1,0 +1,7 @@
+*.exe
+*.o
+*.out
+*.stackdump
+*.vscode
+jsw5227/
+*.tgz
