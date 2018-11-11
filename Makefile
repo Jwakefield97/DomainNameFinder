@@ -10,7 +10,7 @@ clean:
 fresh: clean all
 
 run: 
-	./listIPDNS 255.255.255 192.168.1
+	./listIPDNS 255.255.255.0 192.168.1.0
 
 pack: clean
 	mkdir jsw5227
