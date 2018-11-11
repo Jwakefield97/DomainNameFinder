@@ -31,10 +31,10 @@ int main(int argc, char **argv){
     printf("getting dns for %s %s\n",subnetMask,dottedIp);
     printf("subnet: %lu\nip: %lu\nnet: %lu\nnet str: %s\nnum hosts: %lu\n",subnet,ip,network,inet_ntoa(ans),numHosts);
     for (int i=0; i<numHosts; i++) {
-        unsigned long int addr = network;
-        addr = ntohl(addr);
-        addr = addr+i;
-        addr = htonl(addr);
+        unsigned long int addr = ntohl(network);//flip byte order
+        addr = addr+i; //increment ip
+        addr = htonl(addr); //flip byte order back
+
         struct in_addr x = {addr};
         printf("%d:\t%s\n",i,inet_ntoa(x));
     }
