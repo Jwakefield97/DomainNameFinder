@@ -18,11 +18,10 @@
 int main(int argc, char **argv){
     char *subnetMask = argv[1];
     char *dottedIp = argv[2]; 
-    char *maxIp = "255.255.255.255";
+    unsigned long int max = 4294967295; //max ip 255.255.255.255
 
     unsigned long int ip = inet_addr(dottedIp);
     unsigned long int subnet = inet_addr(subnetMask);   
-    unsigned long int max = inet_addr(maxIp);   
     unsigned long int numHosts = max/(subnet & max);   
 
     unsigned long int network = ip & subnet; //get the network portion of the address
