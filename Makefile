@@ -6,6 +6,7 @@ listIPDNS: listIPDNS.c
 clean: 
 	rm -f listIPDNS
 	rm -f jsw5227.tgz
+	rm -f *.stackdump
 
 fresh: clean all
 
