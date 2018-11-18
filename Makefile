@@ -18,6 +18,7 @@ pack: clean
 	cp listIPDNS.c jsw5227/listIPDNS.c
 	cp Makefile jsw5227/Makefile
 	cp Readme.md jsw5227/Readme.md
+	cp hw5.docx jsw5227/hw5.docx
 	tar cvfz jsw5227.tgz jsw5227
 	rm -rf jsw5227
 	
